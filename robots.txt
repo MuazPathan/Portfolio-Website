@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://muaz-builder-hub.vercel.app/sitemap.xml
