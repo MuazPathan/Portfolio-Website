@@ -26,7 +26,7 @@ A sleek, responsive portfolio showcase and service catalog web application featu
 
 To manage packages and add-ons:
 1. Click the **Admin Login** button in the header.
-2. Enter the admin password: `8956255138`
+2. Enter the admin password: `muaz123`
 3. Use the management buttons to add, edit, or delete items.
 
 ---
