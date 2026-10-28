@@ -5,924 +5,943 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MuazBuilds | Custom Websites & POS Systems</title>
 
-  <!-- Google Search Console Verification (Paste your exact tag from GSC here) -->
-  <meta name="google-site-verification" content="" />
+  <!-- Google Search Console Verification -->
+  <meta name="google-site-verification" content="googled6c4ce8a8659b390.html" />
 
-  <!-- SEO Description (Shows up under your title on Google Search) -->
+  <!-- SEO Description -->
   <meta name="description" content="MuazBuilds develops custom websites, point-of-sale (POS) systems, and tailored web applications for businesses.">
-*{
-box-sizing: border-box;
-margin: 0;
-padding: 0;
-font-family: 'Plus Jakarta Sans', sans-serif;
-}
-body {
-min-height: 100vh;
-background: linear-gradient(135deg, #fef9c3 0%, #fef08a 50%, #fde047 100%);
-color: #d2d6db;
-padding: 30px 20px;
-background-attachment: fixed;
-}
-.container {
-max-width: 1200px;
-margin: 0 auto;
-}
-/* Frosted Glass Header */
-header {
-background: rgba(255, 255, 255, 0.45);
-backdrop-filter: blur(80px);
--webkit-backdrop-filter: blur(80px);
-border: 1px solid rgba(255, 255, 255, 0.7);
-border-radius: 24px;
-padding: 24px 32px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-margin-bottom: 35px;
-box-shadow: 0 15px 35px rgba(202, 138, 4, 0.1);
-}
-.logo-area h1 {
-font-size: 1.6rem;
-font-weight: 700;
-color: #713f12;
-letter-spacing: -0.5px;
-}
-.logo-area p {
-font-size: 0.85rem;
-color: #854d0e;
-margin-top: 2px;
-}
-.nav-actions {
-display: flex;
-gap: 12px;
-align-items: center;
-}
-.btn {
-background: rgba(255, 255, 255, 0.6);
-backdrop-filter: blur(10px);
-border: 1px solid rgba(255, 255, 255, 0.8);
-padding: 10px 20px;
-border-radius: 14px;
-font-weight: 600;
-cursor: pointer;
-transition: all 0.2s ease;
-color: #713f12;
-font-size: 0.9rem;
-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-}
-.btn:hover {
-background: rgba(255, 255, 255, 0.85);
-transform: translateY(-1px);
-}
-.btn-primary {
-background: #ca8a04;
-color: #ffffff;
-border: none;
-}
-.btn-primary:hover {
-background: #a16207;
-}
-/* Main Catalog Grid */
-.catalog-grid {
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-gap: 28px;
-margin-bottom: 40px;
-}
-/* Frosted Glass Card */
-.glass-card {
-background: rgba(255, 255, 255, 0.45);
-backdrop-filter: blur(80px);
--webkit-backdrop-filter: blur(80px);
-border: 1px solid rgba(255, 255, 255, 0.7);
-border-radius: 24px;
-overflow: hidden;
-box-shadow: 0 15px 35px rgba(202, 138, 4, 0.08);
-display: flex;
-flex-direction: column;
-transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-.glass-card:hover {
-transform: translateY(-5px);
-box-shadow: 0 20px 45px rgba(202, 138, 4, 0.15);
-background: rgba(255, 255, 255, 0.55);
-}
-.card-img-container {
-width: 100%;
-height: 200px;
-background: rgba(255, 255, 255, 0.3);
-overflow: hidden;
-position: relative;
-border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-}
-.card-img-container img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-}
-.no-image {
-display: flex;
-align-items: center;
-justify-content: center;
-height: 100%;
-color: #a16207;
-font-size: 0.85rem;
-font-weight: 500;
-}
-.card-content {
-padding: 24px;
-flex-grow: 1;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-}
-.card-title {
-font-size: 1.25rem;
-font-weight: 700;
-color: #713f12;
-margin-bottom: 8px;
-}
-.card-desc {
-font-size: 0.9rem;
-color: #78716c;
-margin-bottom: 18px;
-line-height: 1.5;
-}
-.card-meta {
-display: flex;
-justify-content: space-between;
-align-items: center;
-background: rgba(255, 255, 255, 0.4);
-padding: 12px 16px;
-border-radius: 14px;
-margin-bottom: 18px;
-border: 1px solid rgba(255, 255, 255, 0.6);
-}
-.price {
-font-size: 1.25rem;
-font-weight: 700;
-color: #854d0e;
-}
-.conditions-tag {
-font-size: 0.8rem;
-color: #713f12;
-font-weight: 600;
-background: rgba(254, 240, 138, 0.7);
-padding: 5px 10px;
-border-radius: 8px;
-border: 1px solid rgba(253, 224, 71, 0.5);
-}
-/* Admin Controls Inside Card (Hidden by default) */
-.admin-controls {
-display: none;
-gap: 10px;
-margin-top: 14px;
-border-top: 1px solid rgba(202, 138, 4, 0.15);
-padding-top: 14px;
-}
-body.admin-mode .admin-controls {
-display: flex;
-}
-.btn-sm {
-padding: 6px 14px;
-font-size: 0.8rem;
-border-radius: 10px;
-}
-.btn-danger {
-background: rgba(254, 226, 226, 0.8);
-color: #991b1b;
-border: 1px solid rgba(254, 202, 202, 0.8);
-}
-.btn-danger:hover {
-background: rgba(254, 202, 202, 0.9);
-}
 
-/* Add-ons List Section Styling */
-.addons-section {
-    background: rgba(255, 255, 255, 0.45);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.7);
-    border-radius: 24px;
-    padding: 28px 32px;
-    margin-bottom: 40px;
-    box-shadow: 0 15px 35px rgba(202, 138, 4, 0.08);
-}
-.addons-header-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-.addons-title {
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: #713f12;
-}
-.addons-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-}
-.addon-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.7);
-    padding: 16px 20px;
-    border-radius: 16px;
-    gap: 15px;
-    transition: background 0.2s ease;
-}
-.addon-item:hover {
-    background: rgba(255, 255, 255, 0.75);
-}
-.addon-info {
-    flex-grow: 1;
-}
-.addon-name {
-    font-size: 1.05rem;
-    font-weight: 700;
-    color: #713f12;
-    margin-bottom: 3px;
-}
-.addon-details {
-    font-size: 0.85rem;
-    color: #78716c;
-}
-.addon-right {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-.addon-price-tag {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #854d0e;
-    white-space: nowrap;
-}
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #fef9c3 0%, #fef08a 50%, #fde047 100%);
+      color: #1e293b;
+      padding: 30px 20px;
+      background-attachment: fixed;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-/* Frosted Glass Footer Styling */
-footer {
-    background: rgba(255, 255, 255, 0.45);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.7);
-    border-radius: 24px;
-    padding: 24px 32px;
-    text-align: center;
-    color: #713f12;
-    font-size: 0.9rem;
-    margin-top: 40px;
-    box-shadow: 0 15px 35px rgba(202, 138, 4, 0.1);
-}
+    /* Frosted Glass Header */
+    header {
+      background: rgba(255, 255, 255, 0.45);
+      backdrop-filter: blur(80px);
+      -webkit-backdrop-filter: blur(80px);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      border-radius: 24px;
+      padding: 24px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 35px;
+      box-shadow: 0 15px 35px rgba(202, 138, 4, 0.1);
+    }
+    .logo-area h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #713f12;
+      letter-spacing: -0.5px;
+    }
+    .logo-area p {
+      font-size: 0.85rem;
+      color: #854d0e;
+      margin-top: 2px;
+    }
+    .nav-actions {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+    .btn {
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      padding: 10px 20px;
+      border-radius: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      color: #713f12;
+      font-size: 0.9rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    }
+    .btn:hover {
+      background: rgba(255, 255, 255, 0.85);
+      transform: translateY(-1px);
+    }
+    .btn-primary {
+      background: #ca8a04;
+      color: #ffffff;
+      border: none;
+    }
+    .btn-primary:hover {
+      background: #a16207;
+    }
 
-/* Frosted Glass Modals */
-.modal-backdrop {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background: rgba(0, 0, 0, 0.25);
-backdrop-filter: blur(8px);
--webkit-backdrop-filter: blur(8px);
-display: none;
-align-items: center;
-justify-content: center;
-z-index: 1000;
-padding: 20px;
-}
-.modal-backdrop.active {
-display: flex;
-}
-.modal {
-background: rgba(255, 255, 255, 0.75);
-backdrop-filter: blur(25px);
--webkit-backdrop-filter: blur(25px);
-border: 1px solid rgba(255, 255, 255, 0.9);
-border-radius: 28px;
-width: 100%;
-max-width: 500px;
-padding: 35px;
-box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
-}
-.modal h2 {
-font-size: 1.4rem;
-color: #713f12;
-margin-bottom: 22px;
-}
-.form-group {
-margin-bottom: 18px;
-}
-.form-group label {
-display: block;
-font-size: 0.85rem;
-font-weight: 600;
-color: #713f12;
-margin-bottom: 6px;
-}
-.form-control {
-width: 100%;
-padding: 12px 16px;
-background: rgba(255, 255, 255, 0.6);
-backdrop-filter: blur(10px);
-border: 1px solid rgba(253, 224, 71, 0.8);
-border-radius: 14px;
-font-size: 0.9rem;
-color: #1e293b;
-outline: none;
-transition: all 0.2s ease;
-}
-.form-control:focus {
-border-color: #ca8a04;
-background: rgba(255, 255, 255, 0.9);
-}
-textarea.form-control {
-resize: vertical;
-min-height: 90px;
-}
-.modal-actions {
-display: flex;
-justify-content: flex-end;
-gap: 12px;
-margin-top: 26px;
-}
-/* Empty State */
-.empty-state {
-text-align: center;
-padding: 60px 20px;
-background: rgba(255, 255, 255, 0.3);
-backdrop-filter: blur(10px);
-border-radius: 24px;
-border: 1px dashed rgba(202, 138, 4, 0.3);
-grid-column: 1 / -1;
-}
-.empty-state h3 {
-color: #713f12;
-margin-bottom: 8px;
-}
-.empty-state p{
-color: #854d0e;
-font-size: 0.9rem;
-}
-/* Contact Section Styling */
-.contact-section {
-    background: rgba(255, 255, 255, 0.45);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.7);
-    border-radius: 24px;
-    padding: 28px 32px;
-    margin-bottom: 40px;
-    box-shadow: 0 15px 35px rgba(202, 138, 4, 0.08);
-}
-.contact-title {
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: #713f12;
-    margin-bottom: 6px;
-}
-.contact-subtitle {
-    font-size: 0.9rem;
-    color: #78716c;
-    margin-bottom: 20px;
-}
-.contact-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 15px;
-}
-.contact-card {
-    background: rgba(255, 255, 255, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.7);
-    padding: 16px 20px;
-    border-radius: 16px;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    transition: all 0.2s ease;
-}
-.contact-card:hover {
-    background: rgba(255, 255, 255, 0.75);
-    transform: translateY(-2px);
-}
-.contact-label {
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: #854d0e;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-.contact-value {
-    font-size: 0.95rem;
-    font-weight: 700;
-    color: #713f12;
-    word-break: break-all;
-}
-</style>
+    /* Main Catalog Grid */
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 28px;
+      margin-bottom: 40px;
+    }
+
+    /* Frosted Glass Card */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.45);
+      backdrop-filter: blur(80px);
+      -webkit-backdrop-filter: blur(80px);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(202, 138, 4, 0.08);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .glass-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 45px rgba(202, 138, 4, 0.15);
+      background: rgba(255, 255, 255, 0.55);
+    }
+    .card-img-container {
+      width: 100%;
+      height: 200px;
+      background: rgba(255, 255, 255, 0.3);
+      overflow: hidden;
+      position: relative;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    }
+    .card-img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .no-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      color: #a16207;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+    .card-content {
+      padding: 24px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #713f12;
+      margin-bottom: 8px;
+    }
+    .card-desc {
+      font-size: 0.9rem;
+      color: #78716c;
+      margin-bottom: 18px;
+      line-height: 1.5;
+    }
+    .card-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.4);
+      padding: 12px 16px;
+      border-radius: 14px;
+      margin-bottom: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+    }
+    .price {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #854d0e;
+    }
+    .conditions-tag {
+      font-size: 0.8rem;
+      color: #713f12;
+      font-weight: 600;
+      background: rgba(254, 240, 138, 0.7);
+      padding: 5px 10px;
+      border-radius: 8px;
+      border: 1px solid rgba(253, 224, 71, 0.5);
+    }
+
+    /* Admin Controls Inside Card */
+    .admin-controls {
+      display: none;
+      gap: 10px;
+      margin-top: 14px;
+      border-top: 1px solid rgba(202, 138, 4, 0.15);
+      padding-top: 14px;
+    }
+    body.admin-mode .admin-controls {
+      display: flex;
+    }
+    .btn-sm {
+      padding: 6px 14px;
+      font-size: 0.8rem;
+      border-radius: 10px;
+    }
+    .btn-danger {
+      background: rgba(254, 226, 226, 0.8);
+      color: #991b1b;
+      border: 1px solid rgba(254, 202, 202, 0.8);
+    }
+    .btn-danger:hover {
+      background: rgba(254, 202, 202, 0.9);
+    }
+
+    /* Add-ons List Section Styling */
+    .addons-section {
+      background: rgba(255, 255, 255, 0.45);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      border-radius: 24px;
+      padding: 28px 32px;
+      margin-bottom: 40px;
+      box-shadow: 0 15px 35px rgba(202, 138, 4, 0.08);
+    }
+    .addons-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .addons-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #713f12;
+    }
+    .addons-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .addon-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      padding: 16px 20px;
+      border-radius: 16px;
+      gap: 15px;
+      transition: background 0.2s ease;
+    }
+    .addon-item:hover {
+      background: rgba(255, 255, 255, 0.75);
+    }
+    .addon-info {
+      flex-grow: 1;
+    }
+    .addon-name {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #713f12;
+      margin-bottom: 3px;
+    }
+    .addon-details {
+      font-size: 0.85rem;
+      color: #78716c;
+    }
+    .addon-right {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .addon-price-tag {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #854d0e;
+      white-space: nowrap;
+    }
+
+    /* Contact Section Styling */
+    .contact-section {
+      background: rgba(255, 255, 255, 0.45);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      border-radius: 24px;
+      padding: 28px 32px;
+      margin-bottom: 40px;
+      box-shadow: 0 15px 35px rgba(202, 138, 4, 0.08);
+    }
+    .contact-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #713f12;
+      margin-bottom: 6px;
+    }
+    .contact-subtitle {
+      font-size: 0.9rem;
+      color: #78716c;
+      margin-bottom: 20px;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 15px;
+    }
+    .contact-card {
+      background: rgba(255, 255, 255, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      padding: 16px 20px;
+      border-radius: 16px;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      transition: all 0.2s ease;
+    }
+    .contact-card:hover {
+      background: rgba(255, 255, 255, 0.75);
+      transform: translateY(-2px);
+    }
+    .contact-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #854d0e;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .contact-value {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #713f12;
+      word-break: break-all;
+    }
+
+    /* Footer */
+    footer {
+      background: rgba(255, 255, 255, 0.45);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      border-radius: 24px;
+      padding: 24px 32px;
+      text-align: center;
+      color: #713f12;
+      font-size: 0.9rem;
+      margin-top: 40px;
+      box-shadow: 0 15px 35px rgba(202, 138, 4, 0.1);
+    }
+
+    /* Frosted Glass Modals */
+    .modal-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      padding: 20px;
+    }
+    .modal-backdrop.active {
+      display: flex;
+    }
+    .modal {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      border-radius: 28px;
+      width: 100%;
+      max-width: 500px;
+      padding: 35px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+    }
+    .modal h2 {
+      font-size: 1.4rem;
+      color: #713f12;
+      margin-bottom: 22px;
+    }
+    .form-group {
+      margin-bottom: 18px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #713f12;
+      margin-bottom: 6px;
+    }
+    .form-control {
+      width: 100%;
+      padding: 12px 16px;
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(253, 224, 71, 0.8);
+      border-radius: 14px;
+      font-size: 0.9rem;
+      color: #1e293b;
+      outline: none;
+      transition: all 0.2s ease;
+    }
+    .form-control:focus {
+      border-color: #ca8a04;
+      background: rgba(255, 255, 255, 0.95);
+    }
+    textarea.form-control {
+      resize: vertical;
+      min-height: 90px;
+    }
+    .modal-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    /* Empty State */
+    .empty-state {
+      text-align: center;
+      padding: 60px 20px;
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
+      border-radius: 24px;
+      border: 1px dashed rgba(202, 138, 4, 0.3);
+      grid-column: 1 / -1;
+    }
+    .empty-state h3 {
+      color: #713f12;
+      margin-bottom: 8px;
+    }
+    .empty-state p {
+      color: #854d0e;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
-<div class="container">
-<!-- Header -->
-<header>
-<div class="logo-area">
-<h1>Portfolio Catalog By Muaz Builds</h1>
-<p>Choose your professional portfolio style & package</p>
-</div>
-<div class="nav-actions" id="navActions">
-<!-- Navigation buttons render dynamically -->
-</div>
-</header>
-<!-- Catalog Grid -->
-<div class="catalog-grid" id="catalogGrid">
-<!-- Dynamic Cards Render Here -->
-</div>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <div class="logo-area">
+        <h1>Portfolio Catalog By Muaz Builds</h1>
+        <p>Choose your professional portfolio style & package</p>
+      </div>
+      <div class="nav-actions" id="navActions">
+        <!-- Navigation buttons render dynamically -->
+      </div>
+    </header>
 
-<!-- Add-ons List Section -->
-<div class="addons-section">
-    <div class="addons-header-row">
+    <!-- Catalog Grid -->
+    <div class="catalog-grid" id="catalogGrid">
+      <!-- Dynamic Cards Render Here -->
+    </div>
+
+    <!-- Add-ons List Section -->
+    <div class="addons-section">
+      <div class="addons-header-row">
         <h2 class="addons-title">Available Add-ons</h2>
         <button class="btn btn-sm btn-primary" id="addAddonBtn" style="display:none;" onclick="openAddonModal()">+ Add Add-on</button>
-    </div>
-    <ul class="addons-list" id="addonsList">
+      </div>
+      <ul class="addons-list" id="addonsList">
         <!-- Dynamic List Items Render Here -->
-    </ul>
-</div>
-<!-- Contact Section Box -->
-<div class="contact-section">
-    <h2 class="contact-title">Get in Touch</h2>
-    <p class="contact-subtitle">Connect With Me Directly</p>
-    <div class="contact-grid">
+      </ul>
+    </div>
+
+    <!-- Contact Section Box -->
+    <div class="contact-section">
+      <h2 class="contact-title">Get in Touch</h2>
+      <p class="contact-subtitle">Connect With Me Directly</p>
+      <div class="contact-grid">
         <a href="mailto:muazbuilds@gmail.com" class="contact-card">
-            <span class="contact-label">Email</span>
-            <span class="contact-value">muazbuilds@gmail.com</span>
+          <span class="contact-label">Email</span>
+          <span class="contact-value">muazbuilds@gmail.com</span>
         </a>
-        <a href="tel:7822004198" class="contact-card">
-            <span class="contact-label">WhatsApp</span>
-            <span class="contact-value">7822004198</span>
+        <a href="https://wa.me/917822004198" target="_blank" class="contact-card">
+          <span class="contact-label">WhatsApp</span>
+          <span class="contact-value">+91 7822004198</span>
         </a>
         <a href="https://github.com/MuazPathan" target="_blank" class="contact-card">
-            <span class="contact-label">GitHub</span>
-            <span class="contact-value">@MuazPathan</span>
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">@MuazPathan</span>
         </a>
         <a href="https://instagram.com/muazz_pathann" target="_blank" class="contact-card">
-            <span class="contact-label">Instagram</span>
-            <span class="contact-value">@muazz_pathann</span>
+          <span class="contact-label">Instagram</span>
+          <span class="contact-value">@muazz_pathann</span>
         </a>
         <a href="https://linkedin.com/in/muaz-pathan" target="_blank" class="contact-card">
-            <span class="contact-label">LinkedIn</span>
-            <span class="contact-value">muaz-pathan</span>
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value">muaz-pathan</span>
         </a>
+      </div>
     </div>
-</div>
 
-<!-- Footer -->
-<footer>
-    <p>&copy; By Muaz Builds.</p>
-</footer>
-</div>
+    <!-- Footer -->
+    <footer>
+      <p>&copy; By Muaz Builds.</p>
+    </footer>
+  </div>
 
-<!-- Add/Edit Modal -->
-<div class="modal-backdrop" id="portfolioModal">
-<div class="modal">
-<h2 id="modalTitle">Add New Portfolio Type</h2>
-<form id="portfolioForm" onsubmit="savePortfolio(event)">
-<input type="hidden" id="editIndex">
-<div class="form-group">
-<label>Portfolio Title</label>
-<input type="text" class="form-control" id="portTitle" placeholder="e.g., Developer Pro, Minimal UI/UX" required>
-</div>
-<div class="form-group">
-<label>Description & Features</label>
-<textarea class="form-control" id="portDesc" placeholder="Describe what is included in this portfolio package..." required></textarea>
-</div>
-<div class="form-group">
-<label>Pricing (₹ / $)</label>
-<input type="text" class="form-control" id="portPrice" placeholder="e.g., ₹4,999 or $150" required>
-</div>
-<div class="form-group">
-<label>Conditions / Delivery Time</label>
-<input type="text" class="form-control" id="portConditions" placeholder="e.g., 3-day delivery, 2 Revisions" required>
-</div>
-<div class="form-group">
-<label>Upload Sample Image from Computer</label>
-<input type="file" class="form-control" id="portImageFile" accept="image/*">
-</div>
-<div class="modal-actions">
-<button type="button" class="btn" onclick="closeModal()">Cancel</button>
-<button type="submit" class="btn btn-primary">Save Portfolio</button>
-</div>
-</form>
-</div>
-</div>
+  <!-- Add/Edit Portfolio Modal -->
+  <div class="modal-backdrop" id="portfolioModal">
+    <div class="modal">
+      <h2 id="modalTitle">Add New Portfolio Type</h2>
+      <form id="portfolioForm" onsubmit="savePortfolio(event)">
+        <input type="hidden" id="editIndex">
+        <div class="form-group">
+          <label>Portfolio Title</label>
+          <input type="text" class="form-control" id="portTitle" placeholder="e.g., Developer Pro, Minimal UI/UX" required>
+        </div>
+        <div class="form-group">
+          <label>Description & Features</label>
+          <textarea class="form-control" id="portDesc" placeholder="Describe what is included in this portfolio package..." required></textarea>
+        </div>
+        <div class="form-group">
+          <label>Pricing (₹ / $)</label>
+          <input type="text" class="form-control" id="portPrice" placeholder="e.g., ₹4,999 or $150" required>
+        </div>
+        <div class="form-group">
+          <label>Conditions / Delivery Time</label>
+          <input type="text" class="form-control" id="portConditions" placeholder="e.g., 3-day delivery, 2 Revisions" required>
+        </div>
+        <div class="form-group">
+          <label>Upload Sample Image from Computer</label>
+          <input type="file" class="form-control" id="portImageFile" accept="image/*">
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="btn" onclick="closeModal()">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Portfolio</button>
+        </div>
+      </form>
+    </div>
+  </div>
 
-<!-- Add/Edit Add-on Modal -->
-<div class="modal-backdrop" id="addonModal">
-<div class="modal">
-<h2 id="addonModalTitle">Add New Add-on</h2>
-<form id="addonForm" onsubmit="saveAddon(event)">
-<input type="hidden" id="editAddonIndex">
-<div class="form-group">
-<label>Add-on Title</label>
-<input type="text" class="form-control" id="addonTitle" placeholder="e.g., Express 24H Delivery" required>
-</div>
-<div class="form-group">
-<label>Description</label>
-<textarea class="form-control" id="addonDesc" placeholder="Describe what this add-on provides..." required></textarea>
-</div>
-<div class="form-group">
-<label>Pricing (₹ / $)</label>
-<input type="text" class="form-control" id="addonPrice" placeholder="e.g., ₹999 or $25" required>
-</div>
-<div class="form-group">
-<label>Conditions / Details</label>
-<input type="text" class="form-control" id="addonConditions" placeholder="e.g., Instant Setup" required>
-</div>
-<div class="modal-actions">
-<button type="button" class="btn" onclick="closeAddonModal()">Cancel</button>
-<button type="submit" class="btn btn-primary">Save Add-on</button>
-</div>
-</form>
-</div>
-</div>
+  <!-- Add/Edit Add-on Modal -->
+  <div class="modal-backdrop" id="addonModal">
+    <div class="modal">
+      <h2 id="addonModalTitle">Add New Add-on</h2>
+      <form id="addonForm" onsubmit="saveAddon(event)">
+        <input type="hidden" id="editAddonIndex">
+        <div class="form-group">
+          <label>Add-on Title</label>
+          <input type="text" class="form-control" id="addonTitle" placeholder="e.g., Express 24H Delivery" required>
+        </div>
+        <div class="form-group">
+          <label>Description</label>
+          <textarea class="form-control" id="addonDesc" placeholder="Describe what this add-on provides..." required></textarea>
+        </div>
+        <div class="form-group">
+          <label>Pricing (₹ / $)</label>
+          <input type="text" class="form-control" id="addonPrice" placeholder="e.g., ₹999 or $25" required>
+        </div>
+        <div class="form-group">
+          <label>Conditions / Details</label>
+          <input type="text" class="form-control" id="addonConditions" placeholder="e.g., Instant Setup" required>
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="btn" onclick="closeAddonModal()">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Add-on</button>
+        </div>
+      </form>
+    </div>
+  </div>
 
-<!-- Inquiry Modal -->
-<div class="modal-backdrop" id="inquiryModal">
-<div class="modal">
-<h2>Book Portfolio: <span id="inquiryItemTitle" style="color: #ca8a04;"></span></h2>
-<form onsubmit="submitInquiry(event)">
-<div class="form-group">
-<label>Your Name</label>
-<input type="text" class="form-control" id="clientName" placeholder="Enter your full name" required>
-</div>
-<div class="form-group">
-<label>Your Email or Phone</label>
-<input type="text" class="form-control" id="clientContact" placeholder="Email address or WhatsApp number" required>
-</div>
-<div class="form-group">
-<label>Custom Requirements / Notes</label>
-<textarea class="form-control" id="clientNotes" placeholder="Any specific links or color preferences..."></textarea>
-</div>
-<div class="modal-actions">
-<button type="button" class="btn" onclick="closeInquiryModal()">Cancel</button>
-<button type="submit" class="btn btn-primary">Submit Inquiry</button>
-</div>
-</form>
-</div>
-</div>
+  <!-- Inquiry Modal -->
+  <div class="modal-backdrop" id="inquiryModal">
+    <div class="modal">
+      <h2>Book Portfolio: <span id="inquiryItemTitle" style="color: #ca8a04;"></span></h2>
+      <form onsubmit="submitInquiry(event)">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" class="form-control" id="clientName" placeholder="Enter your full name" required>
+        </div>
+        <div class="form-group">
+          <label>Your Email or Phone</label>
+          <input type="text" class="form-control" id="clientContact" placeholder="Email address or WhatsApp number" required>
+        </div>
+        <div class="form-group">
+          <label>Custom Requirements / Notes</label>
+          <textarea class="form-control" id="clientNotes" placeholder="Any specific links or color preferences..."></textarea>
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="btn" onclick="closeInquiryModal()">Cancel</button>
+          <button type="submit" class="btn btn-primary">Submit Inquiry</button>
+        </div>
+      </form>
+    </div>
+  </div>
 
-<script>
-// Check if admin session is active
-let isAdmin = sessionStorage.getItem('isAdminLoggedIn') === 'true';
-let selectedInquiryItem = '';
+  <script>
+    let isAdmin = sessionStorage.getItem('isAdminLoggedIn') === 'true';
+    let selectedInquiryItem = '';
 
-// Default portfolios
-let portfolios = JSON.parse(localStorage.getItem('portfolios')) || [
-{
-title: "Full-Stack Developer Portfolio",
-desc: "High-performance full-stack web development portfolio showcasing responsive front-end interfaces, robust back-end REST APIs, database architecture, and live interactive project deployments.",
-price: "₹5,000",
-conditions: "3 Days Delivery",
-image: "FSD.png"
-},
-{
-title: "Software Engineer Portfolio",
-desc: "Robust engineering portfolio designed to showcase scalable backend systems, clean code architecture, RESTful API development, algorithm optimization, and technical problem-solving case studies.",
-price: "₹5,000",
-conditions: "3 Days Delivery",
-image: "Engineer.png"
-},
-{
-title: "Educator / Teacher Portfolio",
-desc: "Professional educator portfolio highlighting curriculum design, lesson planning, student engagement strategies, and educational technology integration.",
-price: "₹3,000",
-conditions: "3 Days Delivery",
-image: "Educator.png"
-},
-{
-title: "Musician / Artist Portfolio",
-desc: "Creative musician portfolio featuring audio samples, performance videos, album artwork, and a biography section to showcase artistic achievements.",
-price: "₹5,000",
-conditions: "3 Days Delivery",
-image: "Musician.png"
-},
-{
-title: "Analyst",
-desc: "Comprehensive analyst portfolio demonstrating data analysis skills, statistical modeling, data visualization, and case studies of impactful business insights.",
-price: "₹5,000",
-conditions: "3 Days Delivery",
-image: "Analyst.png"
-},
-{
-title: "UI/UX Designer Showcase",
-desc: "Visually appealing UI/UX design portfolio demonstrating user-centered design principles, wireframes, prototypes, and case studies of successful design projects.",
-price: "₹5,000",
-conditions: "3 Days Delivery",
-image: "UI-UX.png"
-}
-];
+    // Default portfolios
+    let portfolios = JSON.parse(localStorage.getItem('portfolios')) || [
+      {
+        title: "Full-Stack Developer Portfolio",
+        desc: "High-performance full-stack web development portfolio showcasing responsive front-end interfaces, robust back-end REST APIs, database architecture, and live interactive project deployments.",
+        price: "₹5,000",
+        conditions: "3 Days Delivery",
+        image: "FSD.png"
+      },
+      {
+        title: "Software Engineer Portfolio",
+        desc: "Robust engineering portfolio designed to showcase scalable backend systems, clean code architecture, RESTful API development, algorithm optimization, and technical problem-solving case studies.",
+        price: "₹5,000",
+        conditions: "3 Days Delivery",
+        image: "Engineer.png"
+      },
+      {
+        title: "Educator / Teacher Portfolio",
+        desc: "Professional educator portfolio highlighting curriculum design, lesson planning, student engagement strategies, and educational technology integration.",
+        price: "₹3,000",
+        conditions: "3 Days Delivery",
+        image: "Educator.png"
+      },
+      {
+        title: "Musician / Artist Portfolio",
+        desc: "Creative musician portfolio featuring audio samples, performance videos, album artwork, and a biography section to showcase artistic achievements.",
+        price: "₹5,000",
+        conditions: "3 Days Delivery",
+        image: "Musician.png"
+      },
+      {
+        title: "Analyst",
+        desc: "Comprehensive analyst portfolio demonstrating data analysis skills, statistical modeling, data visualization, and case studies of impactful business insights.",
+        price: "₹5,000",
+        conditions: "3 Days Delivery",
+        image: "Analyst.png"
+      },
+      {
+        title: "UI/UX Designer Showcase",
+        desc: "Visually appealing UI/UX design portfolio demonstrating user-centered design principles, wireframes, prototypes, and case studies of successful design projects.",
+        price: "₹5,000",
+        conditions: "3 Days Delivery",
+        image: "UI-UX.png"
+      }
+    ];
 
-// Default Add-ons List
-let addons = JSON.parse(localStorage.getItem('addons')) || [
-{
-title: "Add Personal AI Chatbot",
-desc: "Add personal AI Chatbot Trained on your Resume to answer queries about your portfolio.",
-price: "₹2,000",
-conditions: "T&Cs Applies*"
-},
-{
-title: "Urgent Delivery (24H)",
-desc: "Get your portfolio delivered within 24 hours.",
-price: "₹500",
-conditions: "T&Cs Applies*"
-},
-{
-title: "Video Introduction",
-desc: "Get a personalized video introduction in your portfolio.",
-price: "₹2,500",
-conditions: "T&Cs Applies*"
-}
-];
+    // Default Add-ons List
+    let addons = JSON.parse(localStorage.getItem('addons')) || [
+      {
+        title: "Add Personal AI Chatbot",
+        desc: "Add personal AI Chatbot Trained on your Resume to answer queries about your portfolio.",
+        price: "₹2,000",
+        conditions: "T&Cs Applies*"
+      },
+      {
+        title: "Urgent Delivery (24H)",
+        desc: "Get your portfolio delivered within 24 hours.",
+        price: "₹500",
+        conditions: "T&Cs Applies*"
+      },
+      {
+        title: "Video Introduction",
+        desc: "Get a personalized video introduction in your portfolio.",
+        price: "₹2,500",
+        conditions: "T&Cs Applies*"
+      }
+    ];
 
-function saveToStorage() {
-localStorage.setItem('portfolios', JSON.stringify(portfolios));
-localStorage.setItem('addons', JSON.stringify(addons));
-}
+    function saveToStorage() {
+      localStorage.setItem('portfolios', JSON.stringify(portfolios));
+      localStorage.setItem('addons', JSON.stringify(addons));
+    }
 
-function renderNav() {
-const nav = document.getElementById('navActions');
-const addAddonBtn = document.getElementById('addAddonBtn');
-if (isAdmin) {
-document.body.classList.add('admin-mode');
-if (addAddonBtn) addAddonBtn.style.display = 'inline-block';
-nav.innerHTML = `
-<button class="btn btn-primary" onclick="openModal()">+ Add Portfolio</button>
-<button class="btn btn-danger" onclick="adminLogout()">Logout Admin</button>
-`;
-} else {
-document.body.classList.remove('admin-mode');
-if (addAddonBtn) addAddonBtn.style.display = 'none';
-nav.innerHTML = `
-<button class="btn" onclick="promptAdminLogin()">Admin Login</button>
-`;
-}
-}
+    function renderNav() {
+      const nav = document.getElementById('navActions');
+      const addAddonBtn = document.getElementById('addAddonBtn');
+      if (isAdmin) {
+        document.body.classList.add('admin-mode');
+        if (addAddonBtn) addAddonBtn.style.display = 'inline-block';
+        nav.innerHTML = `
+          <button class="btn btn-primary" onclick="openModal()">+ Add Portfolio</button>
+          <button class="btn btn-danger" onclick="adminLogout()">Logout Admin</button>
+        `;
+      } else {
+        document.body.classList.remove('admin-mode');
+        if (addAddonBtn) addAddonBtn.style.display = 'none';
+        nav.innerHTML = `
+          <button class="btn" onclick="promptAdminLogin()">Admin Login</button>
+        `;
+      }
+    }
 
-function promptAdminLogin() {
-const password = prompt("Mr.Muaz Please Enter Password:");
-const correctPassword = "8956255138"; 
-if (password === correctPassword) {
-isAdmin = true;
-sessionStorage.setItem('isAdminLoggedIn', 'true');
-renderNav();
-renderCatalog();
-renderAddons();
-alert("Admin access granted successfully!");
-} else if (password !== null) {
-alert("Incorrect admin password!");
-}
-}
+    function promptAdminLogin() {
+      const password = prompt("Enter Admin Password:");
+      const correctPassword = "8956255138"; 
+      if (password === correctPassword) {
+        isAdmin = true;
+        sessionStorage.setItem('isAdminLoggedIn', 'true');
+        renderNav();
+        renderCatalog();
+        renderAddons();
+        alert("Admin access granted successfully!");
+      } else if (password !== null) {
+        alert("Incorrect admin password!");
+      }
+    }
 
-function adminLogout() {
-isAdmin = false;
-sessionStorage.removeItem('isAdminLoggedIn');
-renderNav();
-renderCatalog();
-renderAddons();
-alert("Logged out of admin mode.");
-}
+    function adminLogout() {
+      isAdmin = false;
+      sessionStorage.removeItem('isAdminLoggedIn');
+      renderNav();
+      renderCatalog();
+      renderAddons();
+      alert("Logged out of admin mode.");
+    }
 
-function renderCatalog() {
-const grid = document.getElementById('catalogGrid');
-grid.innerHTML = '';
-if (portfolios.length === 0) {
-grid.innerHTML = `
-<div class="empty-state">
-<h3>No Portfolios Added Yet</h3>
-<p>${isAdmin ? 'Click "+ Add Portfolio" above to add your packages.' : 'Catalog is currently empty.'}</p>
-</div>
-`;
-return;
-}
-portfolios.forEach((item, index) => {
-const card = document.createElement('div');
-card.className = 'glass-card';
-card.innerHTML = `
-<div class="card-img-container">
-${item.image ? `<img src="${item.image}" alt="${item.title}">` : `<div class="no-image">No Sample Image</div>`}
-</div>
-<div class="card-content">
-<div>
-<div class="card-title">${escapeHTML(item.title)}</div>
-<div class="card-desc">${escapeHTML(item.desc)}</div>
-<div class="card-meta">
-<span class="price">${escapeHTML(item.price)}</span>
-<span class="conditions-tag">${escapeHTML(item.conditions)}</span>
-</div>
-</div>
-<div>
-<button class="btn btn-primary" style="width: 100%;" onclick="openInquiry('${escapeHTML(item.title)}')">Choose This Portfolio</button>
-<div class="admin-controls">
-<button class="btn btn-sm" onclick="openModal(${index})">Edit</button>
-<button class="btn btn-sm btn-danger" onclick="deletePortfolio(${index})">Delete</button>
-</div>
-</div>
-</div>
-`;
-grid.appendChild(card);
-});
-}
+    function renderCatalog() {
+      const grid = document.getElementById('catalogGrid');
+      grid.innerHTML = '';
+      if (portfolios.length === 0) {
+        grid.innerHTML = `
+          <div class="empty-state">
+            <h3>No Portfolios Added Yet</h3>
+            <p>${isAdmin ? 'Click "+ Add Portfolio" above to add your packages.' : 'Catalog is currently empty.'}</p>
+          </div>
+        `;
+        return;
+      }
+      portfolios.forEach((item, index) => {
+        const card = document.createElement('div');
+        card.className = 'glass-card';
+        card.innerHTML = `
+          <div class="card-img-container">
+            ${item.image ? `<img src="${encodeURI(item.image)}" alt="${escapeHTML(item.title)}">` : `<div class="no-image">No Sample Image</div>`}
+          </div>
+          <div class="card-content">
+            <div>
+              <div class="card-title">${escapeHTML(item.title)}</div>
+              <div class="card-desc">${escapeHTML(item.desc)}</div>
+              <div class="card-meta">
+                <span class="price">${escapeHTML(item.price)}</span>
+                <span class="conditions-tag">${escapeHTML(item.conditions)}</span>
+              </div>
+            </div>
+            <div>
+              <button class="btn btn-primary" style="width: 100%;" onclick="openInquiry('${escapeJS(item.title)}')">Choose This Portfolio</button>
+              <div class="admin-controls">
+                <button class="btn btn-sm" onclick="openModal(${index})">Edit</button>
+                <button class="btn btn-sm btn-danger" onclick="deletePortfolio(${index})">Delete</button>
+              </div>
+            </div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
 
-function renderAddons() {
-const list = document.getElementById('addonsList');
-if (!list) return;
-list.innerHTML = '';
+    function renderAddons() {
+      const list = document.getElementById('addonsList');
+      if (!list) return;
+      list.innerHTML = '';
 
-if (addons.length === 0) {
-list.innerHTML = `<li style="text-align: center; color: #854d0e; padding: 15px;">No add-ons available.</li>`;
-return;
-}
+      if (addons.length === 0) {
+        list.innerHTML = `<li style="text-align: center; color: #854d0e; padding: 15px;">No add-ons available.</li>`;
+        return;
+      }
 
-addons.forEach((item, index) => {
-const li = document.createElement('li');
-li.className = 'addon-item';
-li.innerHTML = `
-<div class="addon-info">
-<div class="addon-name">${escapeHTML(item.title)}</div>
-<div class="addon-details">${escapeHTML(item.desc)} &bull; <span class="conditions-tag" style="padding: 2px 6px; font-size: 0.75rem;">${escapeHTML(item.conditions)}</span></div>
-</div>
-<div class="addon-right">
-<span class="addon-price-tag">${escapeHTML(item.price)}</span>
-<button class="btn btn-primary" style="padding: 8px 16px; font-size: 0.85rem;" onclick="openInquiry('${escapeHTML(item.title)} (Add-on)')">Select</button>
-<div class="admin-controls" style="display: ${isAdmin ? 'flex' : 'none'}; border-top: none; margin-top: 0; padding-top: 0;">
-<button class="btn btn-sm" onclick="openAddonModal(${index})">Edit</button>
-<button class="btn btn-sm btn-danger" onclick="deleteAddon(${index})">Delete</button>
-</div>
-</div>
-`;
-list.appendChild(li);
-});
-}
+      addons.forEach((item, index) => {
+        const li = document.createElement('li');
+        li.className = 'addon-item';
+        li.innerHTML = `
+          <div class="addon-info">
+            <div class="addon-name">${escapeHTML(item.title)}</div>
+            <div class="addon-details">${escapeHTML(item.desc)} &bull; <span class="conditions-tag" style="padding: 2px 6px; font-size: 0.75rem;">${escapeHTML(item.conditions)}</span></div>
+          </div>
+          <div class="addon-right">
+            <span class="addon-price-tag">${escapeHTML(item.price)}</span>
+            <button class="btn btn-primary" style="padding: 8px 16px; font-size: 0.85rem;" onclick="openInquiry('${escapeJS(item.title)} (Add-on)')">Select</button>
+            <div class="admin-controls" style="border-top: none; margin-top: 0; padding-top: 0;">
+              <button class="btn btn-sm" onclick="openAddonModal(${index})">Edit</button>
+              <button class="btn btn-sm btn-danger" onclick="deleteAddon(${index})">Delete</button>
+            </div>
+          </div>
+        `;
+        list.appendChild(li);
+      });
+    }
 
-function openModal(index = null) {
-if (!isAdmin) return;
-document.getElementById('portfolioModal').classList.add('active');
-document.getElementById('portfolioForm').reset();
-document.getElementById('editIndex').value = '';
-if (index !== null) {
-document.getElementById('modalTitle').innerText = "Edit Portfolio Type";
-document.getElementById('editIndex').value = index;
-document.getElementById('portTitle').value = portfolios[index].title;
-document.getElementById('portDesc').value = portfolios[index].desc;
-document.getElementById('portPrice').value = portfolios[index].price;
-document.getElementById('portConditions').value = portfolios[index].conditions;
-} else {
-document.getElementById('modalTitle').innerText = "Add New Portfolio Type";
-}
-}
+    function openModal(index = null) {
+      if (!isAdmin) return;
+      document.getElementById('portfolioModal').classList.add('active');
+      document.getElementById('portfolioForm').reset();
+      document.getElementById('editIndex').value = '';
+      if (index !== null) {
+        document.getElementById('modalTitle').innerText = "Edit Portfolio Type";
+        document.getElementById('editIndex').value = index;
+        document.getElementById('portTitle').value = portfolios[index].title;
+        document.getElementById('portDesc').value = portfolios[index].desc;
+        document.getElementById('portPrice').value = portfolios[index].price;
+        document.getElementById('portConditions').value = portfolios[index].conditions;
+      } else {
+        document.getElementById('modalTitle').innerText = "Add New Portfolio Type";
+      }
+    }
 
-function closeModal() {
-document.getElementById('portfolioModal').classList.remove('active');
-}
+    function closeModal() {
+      document.getElementById('portfolioModal').classList.remove('active');
+    }
 
-function savePortfolio(e) {
-e.preventDefault();
-if (!isAdmin) return;
-const index = document.getElementById('editIndex').value;
-const title = document.getElementById('portTitle').value;
-const desc = document.getElementById('portDesc').value;
-const price = document.getElementById('portPrice').value;
-const conditions = document.getElementById('portConditions').value;
-const fileInput = document.getElementById('portImageFile');
+    function savePortfolio(e) {
+      e.preventDefault();
+      if (!isAdmin) return;
+      const index = document.getElementById('editIndex').value;
+      const title = document.getElementById('portTitle').value;
+      const desc = document.getElementById('portDesc').value;
+      const price = document.getElementById('portPrice').value;
+      const conditions = document.getElementById('portConditions').value;
+      const fileInput = document.getElementById('portImageFile');
 
-const processItem = (imageUrl) => {
-const newItem = {
-title,
-desc,
-price,
-conditions,
-image: imageUrl !== undefined ? imageUrl : (index !== '' ? portfolios[index].image : '')
-};
-if (index !== '') {
-portfolios[index] = newItem;
-} else {
-portfolios.push(newItem);
-}
-saveToStorage();
-renderCatalog();
-closeModal();
-};
+      const processItem = (imageUrl) => {
+        const newItem = {
+          title,
+          desc,
+          price,
+          conditions,
+          image: imageUrl !== undefined ? imageUrl : (index !== '' ? portfolios[index].image : '')
+        };
+        if (index !== '') {
+          portfolios[index] = newItem;
+        } else {
+          portfolios.push(newItem);
+        }
+        saveToStorage();
+        renderCatalog();
+        closeModal();
+      };
 
-if (fileInput.files && fileInput.files[0]) {
-const reader = new FileReader();
-reader.onload = function(uploadEvent) {
-processItem(uploadEvent.target.result);
-};
-reader.readAsDataURL(fileInput.files[0]);
-} else {
-processItem(index !== '' ? undefined : '');
-}
-}
+      if (fileInput.files && fileInput.files[0]) {
+        const reader = new FileReader();
+        reader.onload = function(uploadEvent) {
+          processItem(uploadEvent.target.result);
+        };
+        reader.readAsDataURL(fileInput.files[0]);
+      } else {
+        processItem(index !== '' ? undefined : '');
+      }
+    }
 
-function deletePortfolio(index) {
-if (!isAdmin) return;
-if (confirm("Are you sure you want to delete this portfolio type?")) {
-portfolios.splice(index, 1);
-saveToStorage();
-renderCatalog();
-}
-}
+    function deletePortfolio(index) {
+      if (!isAdmin) return;
+      if (confirm("Are you sure you want to delete this portfolio type?")) {
+        portfolios.splice(index, 1);
+        saveToStorage();
+        renderCatalog();
+      }
+    }
 
-function openAddonModal(index = null) {
-if (!isAdmin) return;
-document.getElementById('addonModal').classList.add('active');
-document.getElementById('addonForm').reset();
-document.getElementById('editAddonIndex').value = '';
-if (index !== null) {
-document.getElementById('addonModalTitle').innerText = "Edit Add-on";
-document.getElementById('editAddonIndex').value = index;
-document.getElementById('addonTitle').value = addons[index].title;
-document.getElementById('addonDesc').value = addons[index].desc;
-document.getElementById('addonPrice').value = addons[index].price;
-document.getElementById('addonConditions').value = addons[index].conditions;
-} else {
-document.getElementById('addonModalTitle').innerText = "Add New Add-on";
-}
-}
+    function openAddonModal(index = null) {
+      if (!isAdmin) return;
+      document.getElementById('addonModal').classList.add('active');
+      document.getElementById('addonForm').reset();
+      document.getElementById('editAddonIndex').value = '';
+      if (index !== null) {
+        document.getElementById('addonModalTitle').innerText = "Edit Add-on";
+        document.getElementById('editAddonIndex').value = index;
+        document.getElementById('addonTitle').value = addons[index].title;
+        document.getElementById('addonDesc').value = addons[index].desc;
+        document.getElementById('addonPrice').value = addons[index].price;
+        document.getElementById('addonConditions').value = addons[index].conditions;
+      } else {
+        document.getElementById('addonModalTitle').innerText = "Add New Add-on";
+      }
+    }
 
-function closeAddonModal() {
-document.getElementById('addonModal').classList.remove('active');
-}
+    function closeAddonModal() {
+      document.getElementById('addonModal').classList.remove('active');
+    }
 
-function saveAddon(e) {
-e.preventDefault();
-if (!isAdmin) return;
-const index = document.getElementById('editAddonIndex').value;
-const title = document.getElementById('addonTitle').value;
-const desc = document.getElementById('addonDesc').value;
-const price = document.getElementById('addonPrice').value;
-const conditions = document.getElementById('addonConditions').value;
+    function saveAddon(e) {
+      e.preventDefault();
+      if (!isAdmin) return;
+      const index = document.getElementById('editAddonIndex').value;
+      const title = document.getElementById('addonTitle').value;
+      const desc = document.getElementById('addonDesc').value;
+      const price = document.getElementById('addonPrice').value;
+      const conditions = document.getElementById('addonConditions').value;
 
-const newAddon = { title, desc, price, conditions };
-if (index !== '') {
-addons[index] = newAddon;
-} else {
-addons.push(newAddon);
-}
-saveToStorage();
-renderAddons();
-closeAddonModal();
-}
+      const newAddon = { title, desc, price, conditions };
+      if (index !== '') {
+        addons[index] = newAddon;
+      } else {
+        addons.push(newAddon);
+      }
+      saveToStorage();
+      renderAddons();
+      closeAddonModal();
+    }
 
-function deleteAddon(index) {
-if (!isAdmin) return;
-if (confirm("Are you sure you want to delete this add-on?")) {
-addons.splice(index, 1);
-saveToStorage();
-renderAddons();
-}
-}
+    function deleteAddon(index) {
+      if (!isAdmin) return;
+      if (confirm("Are you sure you want to delete this add-on?")) {
+        addons.splice(index, 1);
+        saveToStorage();
+        renderAddons();
+      }
+    }
 
-function openInquiry(title) {
-selectedInquiryItem = title;
-document.getElementById('inquiryItemTitle').innerText = title;
-document.getElementById('inquiryModal').classList.add('active');
-}
+    function openInquiry(title) {
+      selectedInquiryItem = title;
+      document.getElementById('inquiryItemTitle').innerText = title;
+      document.getElementById('inquiryModal').classList.add('active');
+    }
 
-function closeInquiryModal() {
-document.getElementById('inquiryModal').classList.remove('active');
-}
+    function closeInquiryModal() {
+      document.getElementById('inquiryModal').classList.remove('active');
+    }
 
-function submitInquiry(e) {
-e.preventDefault();
-const name = document.getElementById('clientName').value;
-const contact = document.getElementById('clientContact').value;
-const notes = document.getElementById('clientNotes').value;
-const myPhoneNumber = "7822004198"; 
-const message = `*New Portfolio Inquiry!*\n\n*Package:* ${selectedInquiryItem}\n*Name:* ${name}\n*Contact:* ${contact}\n*Notes:* ${notes || 'None'}`;
-const whatsappURL = `https://wa.me/${myPhoneNumber}?text=${encodeURIComponent(message)}`;
-window.open(whatsappURL, '_blank');
-closeInquiryModal();
-document.getElementById('clientName').value = '';
-document.getElementById('clientContact').value = '';
-document.getElementById('clientNotes').value = '';
-}
+    function submitInquiry(e) {
+      e.preventDefault();
+      const name = document.getElementById('clientName').value;
+      const contact = document.getElementById('clientContact').value;
+      const notes = document.getElementById('clientNotes').value;
+      const myPhoneNumber = "917822004198"; 
+      const message = `*New Portfolio Inquiry!*\n\n*Package:* ${selectedInquiryItem}\n*Name:* ${name}\n*Contact:* ${contact}\n*Notes:* ${notes || 'None'}`;
+      const whatsappURL = `https://wa.me/${myPhoneNumber}?text=${encodeURIComponent(message)}`;
+      window.open(whatsappURL, '_blank');
+      closeInquiryModal();
+      document.getElementById('clientName').value = '';
+      document.getElementById('clientContact').value = '';
+      document.getElementById('clientNotes').value = '';
+    }
 
-function escapeHTML(str) {
-return str.replace(/[&<>'"]/g, 
-tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;'}[tag] || tag)
-);
-}
+    function escapeHTML(str) {
+      if (!str) return '';
+      return String(str).replace(/[&<>'"]/g, 
+        tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;'}[tag] || tag)
+      );
+    }
 
-// Initial setup
-renderNav();
-renderCatalog();
-renderAddons();
-</script>
+    function escapeJS(str) {
+      if (!str) return '';
+      return String(str).replace(/'/g, "\\'");
+    }
+
+    // Initial setup
+    renderNav();
+    renderCatalog();
+    renderAddons();
+  </script>
 </body>
 </html>
